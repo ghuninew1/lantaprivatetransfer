@@ -1,0 +1,43 @@
+{
+    "name": "LANTAPRIVATETRANSFER",
+    "start_url": "/",
+    "short_name": "LANTA",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "display": "standalone",
+    "scope": "/",
+    "description": "@GhuniNew",
+    "orientation": "any",
+    "display_override": ["window-controls-overlay"],
+    "icons": [
+        {
+            "src": "logo320.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "density": "3.0",
+            "purpose": "any"
+        },
+        {
+            "src": "logo144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "density": "4.0",
+            "purpose": "any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "logo320.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "form_factor": "wide",
+            "label": "App"
+        },
+        {
+            "src": "logo320.png",
+            "sizes": "320x320",
+            "type": "image/png",
+            "label": "App"
+        }
+    ]
+}
