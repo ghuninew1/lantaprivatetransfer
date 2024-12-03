@@ -60,7 +60,7 @@ export default function Gallary() {
                 {dataGallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-52 w-52 cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -75,7 +75,7 @@ export default function Gallary() {
                 {data2Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-52 w-52 cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -90,7 +90,7 @@ export default function Gallary() {
                 {data3Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-52 w-52 cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"

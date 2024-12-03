@@ -19,7 +19,7 @@ export default function Transferprices() {
             </div>
             <table className="table-auto w-full max-w-4xl border-collapse border border-gray-300 text-center animate-fadeIn">
                 <thead>
-                    <tr className="bg-gray-200">
+                    <tr className="bg-gray-200 text-gray-600 font-bold text-sm md:text-base">
                         <th>Destination</th>
                         <th>Standard Car</th>
                         <th>Luxury SUV</th>
