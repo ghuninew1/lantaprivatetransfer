@@ -2,7 +2,7 @@ import { useState } from "react";
 import { XMarkIcon} from "@heroicons/react/24/outline";
 
 
-export default function Gallary() {
+export default function Gallery() {
     const [show, setShow] = useState(false);
     const [messageRef, setMessageRef] = useState(null);
 
@@ -55,12 +55,12 @@ export default function Gallary() {
     }
     return (
         <div className="mt-5 mb-10 flex w-full flex-col items-center justify-center">
-            <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase md:text-4xl">Gallary</h1>
+            <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase md:text-4xl">Gallery</h1>
             <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
                 {dataGallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-2 lg:right-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -75,7 +75,7 @@ export default function Gallary() {
                 {data2Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-2 lg:right-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -90,7 +90,7 @@ export default function Gallary() {
                 {data3Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-4 ring-orange-500 hover:ring-lime-700"
+                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-5 ring-2 lg:right-4 ring-orange-500 hover:ring-lime-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"

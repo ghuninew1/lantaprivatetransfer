@@ -1,4 +1,4 @@
-import Gallary from "./Gallary";
+import Gallery from "./Gallery";
 import HomeData from "./HomeData";
 import HomeDataWhy from "./HomeDataWhy";
 
@@ -8,7 +8,7 @@ export default function Home() {
             <div className="flex w-full h-44 lg:h-60 flex-col items-center justify-end bg-[url('/img/bg1.jpg')] bg-cover bg-center bg-no-repeat box-shadow">
             </div>
             <HomeData />
-            <Gallary />
+            <Gallery />
             <HomeDataWhy />
         </div>
     );
