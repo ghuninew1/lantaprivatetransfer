@@ -61,7 +61,7 @@ export default function Contact() {
         <>
             <div className="flex max-w-full flex-col items-center justify-center">
                 <div className="mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.jpg')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
-                    <h1 className="mb-2 rounded-md p-2 text-4xl font-bold uppercase text-slate-200 backdrop-blur-sm animate-fadeIn z-0">
+                    <h1 className="mb-2 rounded-md p-2 text-4xl font-bold uppercase text-slate-200 backdrop-blur-sm animate-fadeIn">
                         Contact
                     </h1>
                 </div>

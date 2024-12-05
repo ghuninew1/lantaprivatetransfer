@@ -31,7 +31,7 @@ const Navbar = () => {
         <div
             className={cx(
                 open ? "scale-y-100" : "scale-y-0",
-                "absolute top-0 z-20 h-auto w-full origin-top gap-1 bg-black text-white transition-all duration-300 ease-in-out lg:hidden",
+                "absolute top-0 z-30 h-auto w-full origin-top gap-1 bg-black text-white transition-all ease-in-out duration-300 lg:hidden",
             )}
         >
             {navLinks
@@ -43,22 +43,22 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
-            <div className="z-10 flex w-full items-center justify-between">
+        <nav className="z-10 h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
+            <div className="z-20 flex w-full items-center justify-between ">
+                <NavLink to="/">
+                    <img src="/img/logo300_2.png" alt="logo" className="h-10 px-5 lg:hidden" />
+                </NavLink>
                 <button
                     onClick={handleOpen}
                     className={cx(open ? "text-red-600" : "text-red-500", "z-20 hover:text-green-600 lg:hidden")}
                 >
                     {open ? <XMarkIcon className="h-10 w-10" /> : <Bars3Icon className="h-10 w-10" />}
                 </button>
-                <NavLink to="/">
-                    <img src="/img/logo300_2.png" alt="logo" className="h-10 px-5 lg:hidden" />
-                </NavLink>
             </div>
-            <div className="hidden h-full items-center justify-center lg:flex">
+            <div className="hidden h-full items-center justify-center lg:flex ">
                 <RenderDefaultMenu />
             </div>
-            <div className="relative flex h-full items-center justify-center bg-slate-900 md:hidden">
+            <div className="z-20 relative flex h-full w-full items-center justify-center bg-slate-900 lg:hidden ">
                 {renderMobileMenu()}
             </div>
         </nav>
