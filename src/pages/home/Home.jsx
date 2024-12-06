@@ -1,3 +1,4 @@
+import Collection from "./Collection";
 import Gallery from "./Gallery";
 import HomeData from "./HomeData";
 import HomeDataWhy from "./HomeDataWhy";
@@ -9,6 +10,7 @@ export default function Home() {
             </div>
             <HomeData />
             <Gallery />
+            <Collection />
             <HomeDataWhy />
         </div>
     );
