@@ -26,7 +26,7 @@ export default function Tourinlanta() {
     return (
         <div className="flex w-full flex-col items-center justify-center max-w-full">
             <div className="mb-10 flex h-44 w-full flex-col items-end justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
-                <h1 className="mb-2 mr-10 rounded-md p-2 text-2xl font-bold uppercase text-slate-200 backdrop-blur-sm lg:text-4xl z-0">
+                <h1 className="mb-2 mr-10 rounded-md p-2 text-2xl font-bold uppercase text-slate-200 lg:text-4xl">
                     {" "}
                     Tourinlanta
                 </h1>
@@ -34,7 +34,7 @@ export default function Tourinlanta() {
 
             <div className="flex flex-col items-center justify-center">
                 {data.map((item) => (
-                    <div key={item.title} className="relative flex w-full h-full flex-col items-center justify-center rounded-xl border-2 border-orange-700/50 p-4 mb-10 shadow-md shadow-orange-600 animate-fadeInUp">
+                    <div key={item.title} className="relative flex w-full h-full flex-col items-center justify-center rounded-xl border-2 border-slate-700/50 p-4 mb-10 shadow-md shadow-slate-600 animate-fadeInUp">
                         <div className="flex justify-center gap-2 shadow-xl shadow-slate-600">
                             <div className="flex flex-col items-center overflow-hidden w-full">
                                 <img src={item.image} alt={item.title} className="max-w-full h-60 object-cover box-shadow" />

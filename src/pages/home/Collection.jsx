@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Collection() {
     const dataCollection = [
         {
@@ -50,9 +52,9 @@ export default function Collection() {
                                 </li>
                             ))}
                         </ul>
-                        <button className="mt-5 rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">
+                        <Link to="/booking" className="mt-5 rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">
                             Book Now
-                        </button>
+                        </Link>
                     </div>
                 ))}
             </div>
