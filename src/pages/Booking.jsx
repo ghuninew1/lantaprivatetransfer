@@ -21,13 +21,13 @@ export default function Booking() {
 
     return (
         <div className="flex max-w-full flex-col items-center justify-center">
-            <div className="box-shadow mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.jpg')] bg-cover bg-center bg-no-repeat lg:h-60">
+            <div className="box-shadow mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60">
                 <h1 className="mb-2 rounded-md p-2 text-4xl font-bold uppercase text-slate-200 backdrop-blur-sm">
                     Booking
                 </h1>
             </div>
 
-            <div className="mb-10 flex w-full max-w-screen-xl flex-col items-center justify-center">
+            <div className="mb-10 flex w-full max-w-screen-xl flex-col items-center justify-center animate-fadeIn">
                 <form
                     className="flex w-full flex-col items-center justify-center gap-5 text-xs lg:text-sm"
                     onSubmit={(e) => e.preventDefault()}

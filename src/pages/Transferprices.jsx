@@ -11,7 +11,7 @@ export default function Transferprices() {
     ];
     return (
         <div className="flex w-full flex-col items-center justify-center">
-            <div className="mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.jpg')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
+            <div className="mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
                 <h1 className="mb-2 rounded-md p-2 text-2xl font-bold uppercase text-slate-200 backdrop-blur-sm lg:text-4xl z-0">
                     {" "}
                     Transferprices

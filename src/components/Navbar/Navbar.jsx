@@ -16,7 +16,7 @@ const Navbar = () => {
         return (
             <div className="hidden h-full w-full items-center justify-center gap-4 lg:flex">
                 <NavLink to="/">
-                    <img src="/img/logo300_2.png" alt="logo" className="h-10" />
+                    <img src="/img/logo300_2.avif" alt="logo" className="h-10" />
                 </NavLink>
                 {navLinks
                     .filter((link) => link.hide !== true)
@@ -46,7 +46,7 @@ const Navbar = () => {
         <nav className="h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
             <div className="z-20 flex w-full items-center justify-between ">
                 <NavLink to="/">
-                    <img src="/img/logo300_2.png" alt="logo" className="h-10 px-5 lg:hidden" />
+                    <img src="/img/logo300_2.avif" alt="logo" className="h-10 px-5 lg:hidden" />
                 </NavLink>
                 <button
                     onClick={handleOpen}

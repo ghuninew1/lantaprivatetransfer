@@ -7,25 +7,25 @@ export default function Gallery() {
     const [messageRef, setMessageRef] = useState(null);
 
     const dataGallary = [
-        { id: 1, img: "/img/g1.jpg", alt: "gallary1" },
-        { id: 2, img: "/img/g2.jpg", alt: "gallary2" },
-        { id: 3, img: "/img/g3.jpg", alt: "gallary3" },
-        { id: 4, img: "/img/g4.jpg", alt: "gallary4" },
-        { id: 5, img: "/img/g5.jpg", alt: "gallary5" },
+        { id: 1, img: "/img/g1.avif", alt: "gallary1" },
+        { id: 2, img: "/img/g2.avif", alt: "gallary2" },
+        { id: 3, img: "/img/g3.avif", alt: "gallary3" },
+        { id: 4, img: "/img/g4.avif", alt: "gallary4" },
+        { id: 5, img: "/img/g5.avif", alt: "gallary5" },
     ];
     const data2Gallary = [
-        { id: 6, img: "/img/g6.jpg", alt: "gallary6" },
-        { id: 7, img: "/img/g7.jpg", alt: "gallary7" },
-        { id: 8, img: "/img/g8.jpg", alt: "gallary8" },
-        { id: 9, img: "/img/g9.jpg", alt: "gallary9" },
-        { id: 10, img: "/img/g10.jpg", alt: "gallary10" },
+        { id: 6, img: "/img/g6.avif", alt: "gallary6" },
+        { id: 7, img: "/img/g7.avif", alt: "gallary7" },
+        { id: 8, img: "/img/g8.avif", alt: "gallary8" },
+        { id: 9, img: "/img/g9.avif", alt: "gallary9" },
+        { id: 10, img: "/img/g10.avif", alt: "gallary10" },
     ];
     const data3Gallary = [
-        { id: 11, img: "/img/g11.jpg", alt: "gallary11" },
-        { id: 12, img: "/img/g12.jpg", alt: "gallary12" },
-        { id: 13, img: "/img/g13.jpg", alt: "gallary13" },
-        { id: 14, img: "/img/g14.jpg", alt: "gallary14" }, 
-        { id: 15, img: "/img/g15.jpg", alt: "gallary15" },
+        { id: 11, img: "/img/g11.avif", alt: "gallary11" },
+        { id: 12, img: "/img/g12.avif", alt: "gallary12" },
+        { id: 13, img: "/img/g13.avif", alt: "gallary13" },
+        { id: 14, img: "/img/g14.avif", alt: "gallary14" }, 
+        { id: 15, img: "/img/g15.avif", alt: "gallary15" },
     ];
 
     function handleClick(img) {

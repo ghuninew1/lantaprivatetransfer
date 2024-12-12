@@ -6,26 +6,26 @@ export default function Tourinlanta() {
             date: "2024-08-01",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repellat.",
             link: "#",
-            image: "/img/1.jpg",
+            image: "/img/1.avif",
         },
         {
             title: "Day 2",
             date: "2024-08-02",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repellat.",
             link: "#",
-            image: "/img/2.jpg",
+            image: "/img/2.avif",
         },
         {
             title: "Day 3",
             date: "2024-08-03",
             description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, repellat.",
             link: "#",
-            image: "/img/3.jpg",
+            image: "/img/3.avif",
         },
     ]
     return (
         <div className="flex w-full flex-col items-center justify-center max-w-full">
-            <div className="mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.jpg')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
+            <div className="mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
                 <h1 className="mb-2 rounded-md p-2 text-2xl font-bold uppercase text-slate-200 backdrop-blur-sm lg:text-4xl z-0">
                     {" "}
                     Tourinlanta
