@@ -43,7 +43,7 @@ const Navbar = () => {
     );
 
     return (
-        <nav className="z-10 h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
+        <nav className="h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
             <div className="z-20 flex w-full items-center justify-between ">
                 <NavLink to="/">
                     <img src="/img/logo300_2.png" alt="logo" className="h-10 px-5 lg:hidden" />
@@ -58,7 +58,7 @@ const Navbar = () => {
             <div className="hidden h-full items-center justify-center lg:flex ">
                 <RenderDefaultMenu />
             </div>
-            <div className="z-20 relative flex h-full w-full items-center justify-center bg-slate-900 lg:hidden ">
+            <div className="relative flex h-full w-full items-center justify-center bg-slate-900 lg:hidden z-20">
                 {renderMobileMenu()}
             </div>
         </nav>
