@@ -55,12 +55,12 @@ export default function Gallery() {
     }
     return (
         <div className="mt-5 mb-10 flex w-full flex-col items-center justify-center">
-            <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase md:text-4xl">Gallery</h1>
+            <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase lg:text-4xl">Gallery</h1>
             <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
                 {dataGallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105"
+                        className="flex h-20 w-20 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105 shadow-lg shadow-orange-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -75,7 +75,7 @@ export default function Gallery() {
                 {data2Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105"
+                        className="flex h-20 w-20 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105 shadow-lg shadow-orange-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"
@@ -90,7 +90,7 @@ export default function Gallery() {
                 {data3Gallary.map((item) => (
                     <div
                         key={item.id}
-                        className="flex h-24 w-24 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105"
+                        className="flex h-20 w-20 lg:h-52 lg:w-52 transition-all cursor-pointer flex-col items-center justify-center rounded-full p-2 lg:p-5 ring-2 lg:ring-4 ring-orange-500 hover:ring-lime-700 hover:scale-105 shadow-lg shadow-orange-700"
                     >
                         <img
                             className="h-full w-full rounded-full object-cover"

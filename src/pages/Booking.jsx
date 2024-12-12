@@ -21,8 +21,8 @@ export default function Booking() {
 
     return (
         <div className="flex max-w-full flex-col items-center justify-center">
-            <div className="box-shadow mb-10 flex h-44 w-full flex-col items-center justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60">
-                <h1 className="mb-2 rounded-md p-2 text-4xl font-bold uppercase text-slate-200 backdrop-blur-sm">
+            <div className="box-shadow mb-10 flex h-44 w-full flex-col items-end justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60">
+                <h1 className="mb-2 mr-10 rounded-md p-2 text-2xl lg:text-4xl font-bold uppercase text-slate-200 backdrop-blur-sm">
                     Booking
                 </h1>
             </div>
