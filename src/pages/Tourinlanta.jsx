@@ -34,7 +34,7 @@ export default function Tourinlanta() {
 
             <div className="flex flex-col items-center justify-center">
                 {data.map((item) => (
-                    <div key={item.title} className="relative flex w-full h-full flex-col items-center justify-center rounded-xl border-2 border-slate-700/50 p-4 mb-10 shadow-md shadow-slate-600 animate-fadeInUp">
+                    <div key={item.title} className="relative flex w-full h-full flex-col items-center justify-center bg-slate-100 rounded-xl border-2 border-slate-700/50 p-4 mb-10 shadow-md shadow-slate-600 animate-fadeInUp">
                         <div className="flex justify-center gap-2 shadow-xl shadow-slate-600">
                             <div className="flex flex-col items-center overflow-hidden w-full">
                                 <img src={item.image} alt={item.title} className="max-w-full h-60 object-cover box-shadow" />
@@ -45,6 +45,7 @@ export default function Tourinlanta() {
                         </div>
                         <div className="flex flex-col items-start justify-center gap-2 pb-10">
                             <h1 className="mb-2 ml-5 text-3xl font-bold">{item.title}</h1>
+                            <hr className="w-full border-2 border-green-700" />
                             <p className="text-center">{item.description}</p>
                         </div>
                         <Link 
