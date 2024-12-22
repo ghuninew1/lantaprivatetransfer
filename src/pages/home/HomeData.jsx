@@ -5,7 +5,7 @@ export default function HomeData() {
                 {" "}
                 WWW.LANTAPRIVATETRANSFER.COM
             </h1>
-            <h1 className="mb-5 rounded-md p-2 text-xl font-bold uppercase lg:text-3xl">
+            <h1 className="mb-5 rounded-md p-2 text-xl font-bold uppercase text-red-600 lg:text-3xl">
                 TRAVEL TOGETER IN SOUTHERN OF THAILAND
             </h1>
             <div className="flex max-w-screen-lg flex-col items-center justify-center px-2">
