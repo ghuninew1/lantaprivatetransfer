@@ -54,7 +54,7 @@ export default function Gallery() {
         );
     }
     return (
-        <div className="mt-5 mb-10 flex w-full flex-col items-center justify-center">
+        <div className="mt-5 mb-20 flex w-full flex-col items-center justify-center">
             <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase lg:text-4xl">Gallery</h1>
             <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
                 {dataGallary.map((item) => (

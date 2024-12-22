@@ -1,6 +1,6 @@
 export default function HomeData() {
     return (
-        <div className="mb-10 flex w-full animate-fadeIn flex-col items-center justify-center">
+        <div className="mb-20 flex w-full animate-fadeIn flex-col items-center justify-center">
             <h1 className="mb-1 rounded-md p-2 text-2xl font-bold uppercase text-red-600 lg:text-4xl">
                 {" "}
                 WWW.LANTAPRIVATETRANSFER.COM

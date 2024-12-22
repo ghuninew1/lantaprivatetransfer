@@ -25,7 +25,7 @@ export default function Collection() {
         },
     ];
     return (
-        <div className="mb-10 mt-10 flex w-full flex-col items-center justify-center">
+        <div className="mb-20 mt-10 flex w-full flex-col items-center justify-center">
             <h1 className="mb-1 rounded-md p-2 text-xl font-bold uppercase lg:text-2xl">We have a Great</h1>
             <h1 className="mb-1 rounded-md p-2 text-2xl font-bold uppercase lg:text-3xl flex">
                 {" "}
