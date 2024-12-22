@@ -75,12 +75,12 @@ export default function Contact() {
                 <div className="flex flex-col items-center justify-center">
                     <PhoneIcon className="h-10 w-10 text-red-600" />
                     <p className="text-xl font-bold mb-3">Phone Number</p>
-                    <p className="text-lg ">+6694 579 6331</p>
+                    <p className="text-lg ">+66 (0)98 162 4827</p>
                 </div>
                 <div className="flex flex-col items-center justify-center">
                     <EnvelopeIcon className="h-10 w-10 text-red-600" />
                     <p className="text-xl font-bold mb-3">Email</p>
-                    <p className="text-lg ">xxxx@gmail.com</p>
+                    <p className="text-lg ">thaiworld2020@gmail.com</p>
                 </div>
             </div>
             <div className="relative mx-auto mb-10 grid w-full max-w-[1100px] grid-cols-1 items-center px-2 lg:grid-cols-2 lg:px-5">

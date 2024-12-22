@@ -3,7 +3,7 @@ import {
   Contact,
   Booking,
   Transferprices,
-  Tourinlanta
+  // Tourinlanta
 } from "../pages";
 
 const navLinks = [
@@ -22,8 +22,8 @@ const navLinks = [
   {
     icon: "",
     text: "Tour in Lanta",
-    to: "/tourinlanta",
-    element: <Tourinlanta />,
+    to: "http://www.lantakayaking.com",
+    element: () => {},
   },
   {
     icon: "",
