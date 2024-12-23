@@ -135,7 +135,7 @@ export default function Contact() {
                 <div className="flex h-full animate-fadeInRight flex-col items-center justify-center gap-2 rounded-md border-[#dcbcbc36] p-3 lg:ml-1 lg:border-2">
                     <div className="animate-fade aspect-video h-full w-full">
                         <Iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126550.55307966114!2d98.96736792957384!3d7.607069482299602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304e037c46373b1f%3A0x40223bc2c381ee0!2z4LiV4Liz4Lia4LilIOC4qOC4suC4peC4suC4lOC5iOC4suC4mSDguK3guLPguYDguKDguK3guYDguIHguLLguLDguKXguLHguJnguJXguLIg4LiB4Lij4Liw4Lia4Li14LmI!5e0!3m2!1sth!2sth!4v1733157871640!5m2!1sth!2sth"
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d247.16826808715487!2d99.03629110066909!3d7.608424754292461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMzYnMzAuNSJOIDk5wrAwMicxMS4zIkU!5e0!3m2!1sth!2sth!4v1734943185291!5m2!1sth!2sth"
                             isOn={true}
                         />
                     </div>
