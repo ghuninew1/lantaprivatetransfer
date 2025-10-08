@@ -95,7 +95,7 @@ export default function Booking() {
     };
 
     return (
-        <div className="relative flex w-full max-w-full flex-col items-center justify-center">
+        <div className="flex w-full max-w-full flex-col items-center justify-center">
             <Portal isOpen={show} closeModal={handleClose}>
                 <ShowMessage />
             </Portal>
