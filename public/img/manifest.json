@@ -11,32 +11,25 @@
     "display_override": ["window-controls-overlay"],
     "icons": [
         {
-            "src": "logo320.avif",
-            "sizes": "320x320",
-            "type": "image/avif",
+            "src": "logo320.png",
+            "sizes": "320x89",
+            "type": "image/png",
             "density": "3.0",
-            "purpose": "any"
-        },
-        {
-            "src": "logo144.avif",
-            "sizes": "144x144",
-            "type": "image/avif",
-            "density": "4.0",
             "purpose": "any"
         }
     ],
     "screenshots": [
         {
-            "src": "logo320.avif",
-            "sizes": "320x320",
-            "type": "image/avif",
+            "src": "logo320.png",
+            "sizes": "320x89",
+            "type": "image/png",
             "form_factor": "wide",
             "label": "App"
         },
         {
-            "src": "logo320.avif",
-            "sizes": "320x320",
-            "type": "image/avif",
+            "src": "logo320.png",
+            "sizes": "320x89",
+            "type": "image/png",
             "label": "App"
         }
     ]

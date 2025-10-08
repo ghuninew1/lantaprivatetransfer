@@ -24,7 +24,7 @@ export default function Contact() {
             setShow(true);
             return;
         } else {
-            fetch("https://getform.io/f/e4109843-da24-41ca-b68c-8856bfe7a695", {
+            fetch("https://getform.io/f/amdywkzb", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {
@@ -46,7 +46,7 @@ export default function Contact() {
 
     const ShowMessage = () => {
         return (
-            <div className="fixed left-1/2 top-1/2 z-50 flex w-full max-w-[300px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-5 rounded-md bg-slate-800 p-5">
+            <div className="fixed left-1/2 top-1/2 z-50 flex w-full max-w-[600px] -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-5 rounded-md bg-slate-800 p-5">
                 <div className="text-center text-xl text-lime-700">{messageRef.current.value}</div>
                 <button
                     className="rounded-md bg-lime-700 p-2 text-white transition-all hover:bg-lime-900"
