@@ -50,7 +50,7 @@ export default function Booking() {
             !data.hotelName ||
             !data.hotelDestination
         ) {
-            setMessageRef("Please fill all the name and email and subject and message");
+            setMessageRef("Please fill all the firstName and lastName and email and phone and pickupDate and pickupTime and price and totalCost and hotelName and hotelDestination");
             setShow(true);
             return;
         } else {
