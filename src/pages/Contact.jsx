@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import Iframe from "../components/Iframe";
 import { PhoneIcon, EnvelopeIcon, MapPinIcon} from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 
 export default function Contact() {
@@ -70,17 +71,22 @@ export default function Contact() {
                 <div className="flex flex-col items-center justify-center">
                     <MapPinIcon className="h-10 w-10 text-red-600" />
                     <p className="text-xl font-bold mb-3">Address</p>
-                    <p className="text-lg ">29 Moo 2, Krabi, Thailand</p>
+                    <p className="text-lg ">42/2 Moo 3, Krabi, Thailand</p>
                 </div>
                 <div className="flex flex-col items-center justify-center">
+                    <Link to={"tel:+66981624827"} className="flex flex-col items-center">
                     <PhoneIcon className="h-10 w-10 text-red-600" />
                     <p className="text-xl font-bold mb-3">Phone Number</p>
                     <p className="text-lg ">+66 (0)98 162 4827</p>
+                    <img src="/img/whatsapplogo1.png" alt="" className="" />
+                    </Link>
                 </div>
                 <div className="flex flex-col items-center justify-center">
+                    <Link to={"mailto:thaiworld2020@gmail.com"} className="flex flex-col items-center justify-center">
                     <EnvelopeIcon className="h-10 w-10 text-red-600" />
                     <p className="text-xl font-bold mb-3">Email</p>
                     <p className="text-lg ">thaiworld2020@gmail.com</p>
+                    </Link>
                 </div>
             </div>
             <div className="relative mx-auto mb-10 grid w-full max-w-[1100px] grid-cols-1 items-center px-2 lg:grid-cols-2 lg:px-5">
