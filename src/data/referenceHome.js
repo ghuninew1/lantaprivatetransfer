@@ -40,5 +40,10 @@ export const homeReference = {
         { label: "Comprehensive", summary: homeContent.services[2] },
         { label: "Variety", summary: referenceVehicles.map(({ type }) => type).join(" · ") },
     ],
-    statistics: ["Visitors today", "Happy customers", "Drivers", "Cities covered"],
+    statistics: [
+        { id: "visitors", label: "Visitors today", value: 0 },
+        { id: "customers", label: "Happy customers", value: 8218 },
+        { id: "drivers", label: "Talented drivers", value: 60 },
+        { id: "cities", label: "Cities covered", value: 200 },
+    ],
 };

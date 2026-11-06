@@ -1,9 +1,26 @@
+import { HandThumbUpIcon } from "@heroicons/react/24/outline";
+import { TrophyIcon, UserGroupIcon } from "@heroicons/react/24/solid";
 import { Link } from "react-router-dom";
 import ReferenceImage from "#components/ReferenceImage";
 import { referenceImages } from "#data/referenceImages";
 import { homeReference } from "#data/referenceHome";
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" });
+
+function CarIcon() {
+    return (
+        <svg aria-hidden="true" viewBox="0 0 64 64" fill="currentColor">
+            <path fillRule="evenodd" d="M6 29 11 14a8 8 0 0 1 8-6h26a8 8 0 0 1 8 6l5 15a9 9 0 0 1 5 8v11h-5v5a5 5 0 0 1-10 0v-5H16v5a5 5 0 0 1-10 0v-5H1V37a9 9 0 0 1 5-8Zm9-1h34l-4-12H19l-4 12Zm-4 6a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm42 0a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z" />
+        </svg>
+    );
+}
+
+const statisticIcons = {
+    visitors: UserGroupIcon,
+    customers: HandThumbUpIcon,
+    drivers: CarIcon,
+    cities: TrophyIcon,
+};
 
 export default function Home() {
     const { business, content, headings, vehicles, articles, quickValues, heroHeading, services, statistics } = homeReference;
@@ -68,8 +85,23 @@ export default function Home() {
                     ))}
                 </div>
             </section>
-            <section aria-label="Reference statistics" className="home-container home-statistics">
-                {statistics.map((label) => <p key={label}><span aria-label="Unavailable">—</span>{label}</p>)}
+            <section aria-label="Sample statistics" className="home-container home-statistics">
+                <dl className="home-statistics-grid">
+                    {statistics.map(({ id, label, value }) => {
+                        const Icon = statisticIcons[id];
+
+                        return (
+                            <div key={id} className="home-statistic">
+                                <Icon aria-hidden="true" />
+                                <div>
+                                    <dt>{label}</dt>
+                                    <dd>{value}+</dd>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </dl>
+                <p className="home-statistics-note">Sample data</p>
             </section>
             <section className="home-articles">
                 <div className="home-container">

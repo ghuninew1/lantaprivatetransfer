@@ -16,7 +16,7 @@ export default function RouteRoot() {
 
     return (
         <div data-home={isHome || undefined} className="bg-background text-foreground flex min-h-screen flex-col font-sans">
-            <Header isHome={isHome} />
+            <Header />
             <Navbar brand={businessContact.name} logo={isHome ? referenceImages.logo : undefined} />
             <main className="min-w-0 flex-1">
                 <Suspense fallback={<Loading />}>

@@ -22,7 +22,7 @@ export const referenceMetadata = {
 export const referenceBusiness = {
   "sourceUrl": "https://www.krabibesttransfer.com/contact.php",
   "status": "verified",
-  "name": "Krabi Best Transfer",
+  "name": "Lanta Private Transfer",
   "address": "1026/18 Moo 2, Nuea Khlong, Krabi",
   "phones": [
     "+6689-2922917",
