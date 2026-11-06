@@ -1,4 +1,4 @@
-import { useInput } from "#hook/useInput";
+import { useInput } from "#hooks/useInput";
 import { cx } from "#utils/utils";
 
 export function useInputs(name = "input", defaultValue = "", props = {}) {

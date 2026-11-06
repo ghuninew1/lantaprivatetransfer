@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { navLinks } from "#assets/navLinks";
+import { navLinks } from "#data/navLinks";
 import NavbarLinks from "./NavbarLinks";
 import { cx } from "#utils/utils";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";

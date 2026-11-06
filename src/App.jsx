@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Error, Root, Loading } from "./components";
-import { navLinks } from "./assets/navLinks";
+import { navLinks } from "./data/navLinks";
 
 export default function App() {
     const mainRoutes = navLinks.map((link) => ({

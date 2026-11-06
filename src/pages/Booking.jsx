@@ -1,5 +1,5 @@
-import { useInputs } from "#components/useInputs";
-import Portal from "#utils/Portal";
+import { useInputs } from "#hooks/useInputs";
+import Portal from "#components/Portal";
 import { useState } from "react";
 
 // import { cx } from "#utils";
