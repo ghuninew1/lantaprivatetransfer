@@ -3,7 +3,7 @@ import { Link, matchPath, useLocation } from "react-router-dom";
 import { navLinks } from "#data/navLinks";
 import { cx } from "#utils/utils";
 
-export default function Navbar({ brand }) {
+export default function Navbar({ brand, logo }) {
     const [openFor, setOpenFor] = useState(null);
     const { key, pathname } = useLocation();
     const open = openFor === key;
@@ -11,7 +11,7 @@ export default function Navbar({ brand }) {
     return (
         <nav className="home-reference-nav" aria-label="Main navigation">
             <div className="home-container home-reference-nav-inner">
-                <Link className="home-brand" to="/" onClick={() => setOpenFor(null)}>{brand}</Link>
+                <Link className="home-brand" to="/" onClick={() => setOpenFor(null)}>{logo?.src ? <img src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} /> : brand}</Link>
                 <button
                     className="home-menu-toggle"
                     type="button"
