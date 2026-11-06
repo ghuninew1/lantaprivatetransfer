@@ -167,3 +167,18 @@ div.home-welcome-image { display: grid; place-items: center; }
     .home-hero-copy > p:first-child { font-size: 26px; }
     .home-hero-copy .home-hero-promotion { max-width: 580px; font-size: 26px; line-height: 1.3; }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+    [data-home-visible="true"] > :not(.home-hero-image) {
+        animation: home-slide-up 550ms ease-out;
+    }
+
+    [data-home-visible="true"]:focus-within > * {
+        animation: none;
+    }
+
+    @keyframes home-slide-up {
+        from { translate: 0 24px; }
+        to { translate: 0 0; }
+    }
+}

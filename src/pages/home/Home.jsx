@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import ReferenceImage from "#components/ReferenceImage";
 import { referenceImages } from "#data/referenceImages";
 import { homeReference } from "#data/referenceHome";
+import useObserver from "#hooks/useObserver";
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" });
 
@@ -22,11 +23,21 @@ const statisticIcons = {
     cities: TrophyIcon,
 };
 
+function HomeSection({ children, ...props }) {
+    const [sectionRef, isVisible] = useObserver();
+
+    return (
+        <section {...props} ref={sectionRef} data-home-visible={isVisible}>
+            {children}
+        </section>
+    );
+}
+
 export default function Home() {
     const { business, content, headings, vehicles, articles, quickValues, heroHeading, services, statistics } = homeReference;
     return (
         <div className="home-page">
-            <section className="home-hero">
+            <HomeSection className="home-hero">
                 {referenceImages.hero.src && <ReferenceImage image={referenceImages.hero} className="home-hero-image" priority />}
                 <div className="home-container home-hero-inner">
                     <div className="home-booking-panel">
@@ -48,16 +59,16 @@ export default function Home() {
                         <p className="home-preview-label">Reference preview · rates and services belong to {business.name}.</p>
                     </div>
                 </div>
-            </section>
-            <section className="home-intro home-container">
+            </HomeSection>
+            <HomeSection className="home-intro home-container">
                 <ReferenceImage image={referenceImages.welcome} className="home-welcome-image" />
                 <div className="home-intro-copy">
                     <h2>Welcome to <span>{business.name}</span></h2>
                     {business.claims.map((claim) => <p key={claim}>{claim}</p>)}
                     <Link to="/transferprices">Explore the reference routes</Link>
                 </div>
-            </section>
-            <section aria-label="Reference services">
+            </HomeSection>
+            <HomeSection aria-label="Reference services">
                 <div className="home-container home-highlights">
                     {services.map(({ label, summary }, index) => (
                         <article key={label}>
@@ -68,8 +79,8 @@ export default function Home() {
                     ))}
                 </div>
                 {referenceImages.fleet.src && <ReferenceImage image={referenceImages.fleet} className="home-fleet-image" />}
-            </section>
-            <section className="home-vehicles home-container">
+            </HomeSection>
+            <HomeSection className="home-vehicles home-container">
                 <h2>{headings[3]}</h2>
                 <div className="home-vehicle-grid">
                     {vehicles.map((vehicle) => (
@@ -84,8 +95,8 @@ export default function Home() {
                         </article>
                     ))}
                 </div>
-            </section>
-            <section aria-label="Sample statistics" className="home-container home-statistics">
+            </HomeSection>
+            <HomeSection aria-label="Sample statistics" className="home-container home-statistics">
                 <dl className="home-statistics-grid">
                     {statistics.map(({ id, label, value }) => {
                         const Icon = statisticIcons[id];
@@ -102,8 +113,8 @@ export default function Home() {
                     })}
                 </dl>
                 <p className="home-statistics-note">Sample data</p>
-            </section>
-            <section className="home-articles">
+            </HomeSection>
+            <HomeSection className="home-articles">
                 <div className="home-container">
                     <h2>{headings[4]}</h2>
                     <div className="home-vehicle-grid">
@@ -117,7 +128,7 @@ export default function Home() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </HomeSection>
         </div>
     );
 }
