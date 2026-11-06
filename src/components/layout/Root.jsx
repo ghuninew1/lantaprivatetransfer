@@ -15,11 +15,11 @@ export default function RouteRoot() {
     return (
         <div
             data-home={isHome || undefined}
-            className="flex min-h-screen flex-col bg-background font-sans text-foreground"
+            className="flex flex-col bg-background min-h-screen font-sans text-foreground"
         >
             <Header />
-            <Navbar brand={businessContact.name} logo={isHome ? referenceImages.logo : undefined} />
-            <main className="min-w-0 flex-1">
+            <Navbar brand={businessContact.name} logo={referenceImages.logo} />
+            <main className="flex-1 min-w-0">
                 <Suspense fallback={<Loading />}>
                     <Outlet />
                 </Suspense>
