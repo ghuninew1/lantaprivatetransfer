@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import PageLayout from "#components/layout/PageLayout";
 import PreviewForm, { FormField } from "#components/PreviewForm";
 import { businessContact } from "#data/businessContact";
-import { contactFields } from "#data/referenceForms";
+import { contactFields } from "#data/referenceContact";
 import { getContactTopic } from "#data/referenceTours";
 
 export default function Contact() {

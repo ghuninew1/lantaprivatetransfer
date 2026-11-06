@@ -1,4 +1,4 @@
-import { referencePages } from "./referenceWebsite";
+import { referencePages } from "./referenceSite";
 import { Home, Transferprices, HowToPay, TourPackages, Gallery, FAQ, Contact, Booking } from "../pages";
 
 const sourcePaths = new Map(referencePages.map(({ id, path }) => [id, path]));

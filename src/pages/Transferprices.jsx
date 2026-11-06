@@ -1,8 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 import PageLayout from "#components/layout/PageLayout";
-import { referenceContent, referenceVehicles } from "#data/referenceWebsite";
+import { routesAndPrices } from "#data/referenceTransferPrices";
+import { referenceVehicles } from "#data/referenceVehicles";
 
-const { currency, tables } = referenceContent.routesAndPrices;
+const { currency, tables } = routesAndPrices;
 const tablesByOrigin = new Map(tables.map((table) => [table.origin, table]));
 const amounts = new Intl.NumberFormat("en", { style: "currency", currency, currencyDisplay: "code", maximumFractionDigits: 0 });
 

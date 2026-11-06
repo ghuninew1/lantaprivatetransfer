@@ -65,3 +65,5 @@ React Router รองรับ path `.php` ที่สอดคล้องก
 บน static hosting ให้ตั้ง SPA fallback ไปยัง `index.html` สำหรับ route ของแอป รวมถึง alias `.php` เพื่อให้เปิด URL ตรงและรีเฟรชได้ การตั้งค่า hosting เป็นงานแยกจากการทดสอบ Vite preview
 
 ฟอร์ม Booking และ Contact ตรวจเฉพาะข้อมูลในหน้า ยังต้องยืนยันข้อมูลธุรกิจ ราคาจริง รายละเอียดทัวร์ สิทธิ์สื่อ และการเชื่อมระบบส่งฟอร์มหรือชำระเงินก่อนเผยแพร่ ผลใน preview ไม่มีการยืนยันว่าจอง ส่งข้อความ หรือชำระเงินสำเร็จ
+
+ข้อมูลอ้างอิงแยกตามหน้าใน `src/data` เช่น Home ใช้ `referenceHome.js` และ Check Price ใช้ `referenceTransferPrices.js` ส่วน `referenceWebsite.js` เป็นจุดรวมสำหรับอ่าน snapshot ทั้งเว็บไซต์

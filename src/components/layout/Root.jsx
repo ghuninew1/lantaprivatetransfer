@@ -1,6 +1,6 @@
 import { Outlet, ScrollRestoration, useLocation } from "react-router-dom";
 import { Suspense } from "react";
-import { referenceBusiness } from "#data/referenceWebsite";
+import { referenceBusiness } from "#data/referenceSite";
 import { businessContact } from "#data/businessContact";
 import { referenceImages } from "#data/referenceImages";
 import Loading from "../Loading";

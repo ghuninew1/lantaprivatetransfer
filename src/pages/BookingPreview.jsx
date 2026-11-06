@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import PageLayout from "#components/layout/PageLayout";
 import PreviewForm, { FormField } from "#components/PreviewForm";
-import { bookingFields } from "#data/referenceForms";
+import { bookingFields } from "#data/referenceBooking";
 
 export default function BookingPreview() {
     return (

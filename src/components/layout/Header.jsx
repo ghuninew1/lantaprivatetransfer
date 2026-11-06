@@ -1,5 +1,5 @@
 import { MapPinIcon, PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
-import { referenceBusiness } from "#data/referenceWebsite";
+import { referenceBusiness } from "#data/referenceSite";
 import { businessContact } from "#data/businessContact";
 
 export default function Header({ isHome }) {

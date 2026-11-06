@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import ReferenceImage from "#components/ReferenceImage";
 import { referenceImages } from "#data/referenceImages";
-import { homeReference } from "./homeData";
+import { homeReference } from "#data/referenceHome";
 
 const dateFormat = new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" });
 

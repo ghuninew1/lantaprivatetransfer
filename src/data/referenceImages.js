@@ -1,4 +1,4 @@
-import { referencePages } from "./referenceWebsite.js";
+import { referencePages } from "./referenceSite.js";
 
 const homePage = referencePages.find(({ id }) => id === "index");
 const homeAssets = homePage.assetReferences;
@@ -7,7 +7,7 @@ const homeAssets = homePage.assetReferences;
 function image(path, width, height, alt = "") {
     const url = new URL(path, homePage.url).href;
     const sourceUrl = homeAssets.find((asset) => asset.url === url)?.url ?? url;
-    return { sourceUrl, src: import.meta.env.DEV ? sourceUrl : undefined, width, height, alt };
+    return { sourceUrl, src: import.meta.env?.DEV ? sourceUrl : undefined, width, height, alt };
 }
 
 export const referenceImages = {
