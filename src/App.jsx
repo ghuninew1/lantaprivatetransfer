@@ -9,15 +9,6 @@ export default function App() {
         element: <>{link.element}</>,
     }));
 
-    //     path: link.to,
-    //     element: <AuthRoute>{link.element}</AuthRoute>,
-    // }));
-
-    // const singing = login.map((link) => ({
-    //     path: link.to,
-    //     element: <AuthUser>{link.element}</AuthUser>,
-    // }));
-
     const rootRoute = createBrowserRouter([
         {
             path: "/",

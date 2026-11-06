@@ -8,7 +8,7 @@ export default function HomeData() {
             <h1 className="mb-5 rounded-md p-2 text-xl font-bold uppercase text-red-600 lg:text-3xl">
                 TRAVEL TOGETER IN SOUTHERN OF THAILAND
             </h1>
-            <div className="flex max-w-screen-lg flex-col items-center justify-center px-2">
+            <div className="flex max-w-(--breakpoint-lg) flex-col items-center justify-center px-2">
                 <p className="mb-5 text-center text-md lg:text-xl">
                     Embark on a journey beyond Koh Lanta to the enchanting provinces of Southern Thailand, where
                     adventure and beauty await at every turn. With our exclusive transfer service from Koh Lanta, your
@@ -17,7 +17,7 @@ export default function HomeData() {
                     that only we can provide.
                 </p>
             </div>
-            <div className="flex max-w-screen-lg flex-col items-center justify-center px-2">
+            <div className="flex max-w-(--breakpoint-lg) flex-col items-center justify-center px-2">
                 <p className="text-md w-full text-center lg:text-xl">
                     <span className="text-red-600 font-bold">Thai world Travel</span> is provided Koh Lanta taxi service to your accommodation, Taxi service from place
                     to any part of Krabi and nearby cities such as Phuket, Trang, Phang Nga, Koh Samui, etc., private

@@ -1,23 +1,359 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer base {
-  :root {
-    --background: hsl(0, 0%, 100%);
-    --foreground: hsl(220, 8%, 8%);
-  }
+@theme {
+    --text-10: 10px;
+    --text-12: 12px;
+    --text-14: 14px;
+    --text-18: 18px;
 
-  .dark {
-    --background: hsl(220, 8%, 8%);
-    --foreground: hsl(0, 0%, 100%);
-  }
+    --spacing-header: 40px;
+    --spacing-footer: 40px;
+    --spacing-sideHi: 50px;
+    --spacing-p1: 10px;
+    --spacing-p2: 20px;
+    --spacing-m1: 10px;
+    --spacing-m2: 20px;
+
+    /* Keep the v3 palette for colors used by the current UI. */
+    --color-slate-100: #f1f5f9;
+    --color-slate-200: #e2e8f0;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-gray-200: #e5e7eb;
+    --color-gray-300: #d1d5db;
+    --color-gray-600: #4b5563;
+    --color-gray-700: #374151;
+    --color-neutral-600: #525252;
+    --color-neutral-700: #404040;
+    --color-red-50: #fef2f2;
+    --color-red-500: #ef4444;
+    --color-red-600: #dc2626;
+    --color-red-700: #b91c1c;
+    --color-orange-50: #fff7ed;
+    --color-orange-300: #fdba74;
+    --color-orange-500: #f97316;
+    --color-orange-600: #ea580c;
+    --color-orange-700: #c2410c;
+    --color-lime-400: #a3e635;
+    --color-lime-600: #65a30d;
+    --color-lime-700: #4d7c0f;
+    --color-lime-900: #365314;
+    --color-green-50: #f0fdf4;
+    --color-green-300: #86efac;
+    --color-green-500: #22c55e;
+    --color-green-600: #16a34a;
+    --color-green-700: #15803d;
+    --color-green-800: #166534;
+    --color-blue-600: #2563eb;
+    --color-blue-700: #1d4ed8;
+    --color-indigo-50: #eef2ff;
+    --color-indigo-500: #6366f1;
+
+    --color-fb: #1877f2;
+    --color-line: #00c900;
+    --color-google: #ea4234;
+    --color-github: #24292f;
+
+    --animate-arrowIdle: arrowIdle 2s ease infinite;
+    --animate-zoomOut: zoomOut 0.7s ease-in-out forwards;
+    --animate-zoomOutUp: zoomOutUp 0.7s ease-in-out forwards;
+    --animate-zoomOutDown: zoomOutDown 0.7s ease-in-out forwards;
+    --animate-zoomOutLeft: zoomOutLeft 0.7s ease-in-out forwards;
+    --animate-zoomOutRight: zoomOutRight 0.7s ease-in-out forwards;
+    --animate-zoomIn: zoomIn 0.7s ease-in-out forwards;
+    --animate-zoomInUp: zoomInUp 0.7s ease-in-out forwards;
+    --animate-zoomInDown: zoomInDown 0.7s ease-in-out forwards;
+    --animate-zoomInLeft: zoomInLeft 0.7s ease-in-out forwards;
+    --animate-zoomInRight: zoomInRight 0.7s ease-in-out forwards;
+    --animate-fadeIn: fadeIn 0.5s ease-in-out forwards;
+    --animate-fadeInUp: fadeInUp 0.7s ease-in-out forwards;
+    --animate-fadeInDown: fadeInDown 0.7s ease-in-out forwards;
+    --animate-fadeInLeft: fadeInLeft 0.7s ease-in-out forwards;
+    --animate-fadeInRight: fadeInRight 0.7s ease-in-out forwards;
+    --animate-fadeOut: fadeOut 0.7s ease-in-out forwards;
+    --animate-fadeOutUp: fadeOutUp 0.7s ease-in-out forwards;
+    --animate-fadeOutDown: fadeOutDown 0.7s ease-in-out forwards;
+    --animate-fadeOutLeft: fadeOutLeft 0.7s ease-in-out forwards;
+    --animate-fadeOutRight: fadeOutRight 0.7s ease-in-out forwards;
+
+    @keyframes arrowIdle {
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+        50% {
+            transform: translateX(-10px);
+        }
+    }
+    @keyframes zoomOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3);
+        }
+    }
+    @keyframes zoomOutUp {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateY(-2000px);
+        }
+    }
+    @keyframes zoomOutDown {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateY(2000px);
+        }
+    }
+    @keyframes zoomOutLeft {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateX(-2000px);
+        }
+    }
+    @keyframes zoomOutRight {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateX(2000px);
+        }
+    }
+    @keyframes zoomIn {
+        0% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3);
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes zoomInUp {
+        0% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateY(2000px);
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes zoomInDown {
+        0% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateY(-2000px);
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes zoomInLeft {
+        0% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateX(-2000px);
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes zoomInRight {
+        0% {
+            opacity: 0;
+            transform: scale3d(0.3, 0.3, 0.3) translateX(2000px);
+        }
+        50% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(1000px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-1000px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    @keyframes fadeInLeft {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes fadeInRight {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    @keyframes fadeOut {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    @keyframes fadeOutUp {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(-1000px);
+        }
+    }
+    @keyframes fadeOutDown {
+        0% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(100px);
+        }
+    }
+    @keyframes fadeOutLeft {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(-1000px);
+        }
+    }
+    @keyframes fadeOutRight {
+        0% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            opacity: 0;
+            transform: translateX(1000px);
+        }
+    }
 }
 
-@layer components {
-  .box-shadow {
+@theme inline {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+}
+
+/* Utilities with values specific to one property. */
+@utility h-h2 {
+    height: 2em;
+}
+@utility h-h3 {
+    height: 3em;
+}
+@utility h-h4 {
+    height: 4em;
+}
+@utility h-nav {
+    height: 100px;
+}
+@utility w-main {
+    width: 100%;
+}
+@utility w-mainHi {
+    width: 100%;
+}
+@utility min-h-main {
+    min-height: calc(100vh - 180px);
+}
+@utility min-h-mainHi {
+    min-height: calc(100vh - 100px);
+}
+@utility min-h-header {
+    min-height: 50px;
+}
+@utility max-w-main {
+    max-width: 100%;
+}
+@utility max-w-mainHi {
+    max-width: 100%;
+}
+@utility max-w-sideHi {
+    max-width: 50px;
+}
+
+@utility h-h2\.5 {
+    height: 2.5em;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+}
+
+@utility box-shadow {
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
-  }
+}
+
+@layer base {
+    :root {
+        --background: hsl(0, 0%, 100%);
+        --foreground: hsl(220, 8%, 8%);
+    }
+
+    .dark {
+        --background: hsl(220, 8%, 8%);
+        --foreground: hsl(0, 0%, 100%);
+    }
 }

@@ -32,7 +32,7 @@ export default function Collection() {
                 collection of 
                 <p className="text-red-600 ml-2">  vehicles</p>
             </h1>
-            <div className="flex max-w-screen-lg flex-col items-center justify-center px-2 lg:flex-row">
+            <div className="flex max-w-(--breakpoint-lg) flex-col items-center justify-center px-2 lg:flex-row">
                 {dataCollection.map((item, index) => (
                     <div key={index} className="flex flex-col items-center justify-center p-5">
                         <h1 className="mb-1 rounded-md p-2 text-xl font-bold uppercase">{item.title}</h1>
@@ -52,7 +52,7 @@ export default function Collection() {
                                 </li>
                             ))}
                         </ul>
-                        <Link to="/booking" className="mt-5 rounded bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">
+                        <Link to="/booking" className="mt-5 rounded-sm bg-blue-600 px-4 py-2 font-bold text-white hover:bg-blue-700">
                             Book Now
                         </Link>
                     </div>

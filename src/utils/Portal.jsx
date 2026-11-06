@@ -6,7 +6,7 @@ const Portal = ({ children, isOpen=false, closeModal }) => {
     return ReactDOM.createPortal(
         <div
             onClick={closeModal}
-            className={` z-10 bg-black bg-opacity-50 fixed top-0 left-0 w-full h-full flex justify-center items-center
+            className={` z-10 bg-black/50 fixed top-0 left-0 w-full h-full flex justify-center items-center
             ${isOpen && "animate-zoom"}`}
         >
             {children}

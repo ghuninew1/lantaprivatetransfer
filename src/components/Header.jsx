@@ -4,7 +4,7 @@ import { PhoneIcon, EnvelopeIcon, HomeIcon } from "@heroicons/react/24/outline";
 export default function Header() {
     return (
         <header className="w-full bg-slate-800 px-5 lg:block lg:h-header animate-zoomInDown">
-            <div className="mx-auto flex h-full max-w-screen-xl items-center justify-between lg:flex-row p-1">
+            <div className="mx-auto flex h-full max-w-(--breakpoint-xl) items-center justify-between lg:flex-row p-1">
                 <Link to={"https://maps.app.goo.gl/LAguPtu6SZLX66Ja8"} target="_blank" className="flex items-center">
                     <HomeIcon className="mx-1 h-4 w-4 text-white" />
                     <p className="text-xs font-normal text-white lg:text-base"> 42/2 Moo 3, Krabi, Thailand</p>

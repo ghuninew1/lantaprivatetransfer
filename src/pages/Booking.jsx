@@ -105,7 +105,7 @@ export default function Booking() {
                 </h1>
             </div>
 
-            <div className="mb-10 flex w-full max-w-screen-xl animate-fadeIn flex-col items-center justify-center">
+            <div className="mb-10 flex w-full max-w-(--breakpoint-xl) animate-fadeIn flex-col items-center justify-center">
                 <form
                     className="flex w-full flex-col items-center justify-center gap-5 text-xs lg:text-sm"
                     onSubmit={handleSubmit}
@@ -114,7 +114,7 @@ export default function Booking() {
                         <label className="flex w-full items-center justify-start shadow-md lg:w-1/2">
                             <p className="m-2 flex w-1/3 flex-col items-end justify-center text-sm font-bold">Prefix</p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="prefix"
                                 defaultValue={""}
                             >
@@ -155,7 +155,7 @@ export default function Booking() {
                                 Journey Type
                             </p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="Journeytype"
                                 defaultValue={""}
                             >
@@ -168,7 +168,7 @@ export default function Booking() {
                         <label className="flex w-full items-center justify-start shadow-md lg:w-1/2">
                             <p className="m-2 flex w-1/3 flex-col items-end justify-center text-sm font-bold">From</p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="Journeytype"
                                 defaultValue={""}
                             >
@@ -182,7 +182,7 @@ export default function Booking() {
                         <label className="flex w-full items-center justify-start shadow-md lg:w-1/2">
                             <p className="m-2 flex w-1/3 flex-col items-end justify-center text-sm font-bold">To</p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="Journeytype"
                                 defaultValue={""}
                             >
@@ -214,7 +214,7 @@ export default function Booking() {
                                 Vehicle Type
                             </p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="VehicleType"
                                 defaultValue={""}
                             >
@@ -230,7 +230,7 @@ export default function Booking() {
                                 Number of Vehicles
                             </p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="numberofvehicles"
                                 defaultValue={""}
                             >
@@ -246,7 +246,7 @@ export default function Booking() {
                                 Passengers
                             </p>
                             <select
-                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
+                                className="m-2 flex h-10 w-full items-center justify-center rounded-md border border-gray-300 bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500"
                                 name="numberofvehicles"
                                 defaultValue={""}
                             >
@@ -290,7 +290,7 @@ export default function Booking() {
                             <p className="m-2 flex w-1/3 flex-col items-end justify-center text-sm font-bold">
                                 Remarks
                             </p>
-                            <textarea className="m-2 flex h-10 w-full items-center justify-center rounded-md border bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500" />
+                            <textarea className="m-2 flex h-10 w-full items-center justify-center rounded-md border bg-white px-2 py-1 text-sm font-medium text-gray-700 shadow-xs focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500" />
                         </label>
                         <label className="m-2 flex w-full items-center justify-center">
                             <button

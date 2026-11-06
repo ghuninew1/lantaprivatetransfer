@@ -39,7 +39,7 @@ export default function Gallery() {
         };
 
         return (
-            <div className="fixed left-1/2 top-1/2 z-50 flex w-full max-w-screen-lg -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-5 rounded-md bg-black p-5">
+            <div className="fixed left-1/2 top-1/2 z-50 flex w-full max-w-(--breakpoint-lg) -translate-x-1/2 -translate-y-1/2 flex-col items-center justify-center gap-5 rounded-md bg-black p-5">
                 <div className="text-center text-xl text-lime-700">
                     <img className="h-full w-full max-h-[700px] object-cover" src={messageRef} alt="" />
                 </div>
@@ -56,7 +56,7 @@ export default function Gallery() {
     return (
         <div className="mt-5 mb-20 flex w-full flex-col items-center justify-center">
             <h1 className="mb-5 rounded-md p-2 text-2xl font-bold uppercase lg:text-4xl">Gallery</h1>
-            <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
+            <div className="flex h-full w-full max-w-(--breakpoint-xl) flex-row items-center justify-center animate-zoomIn">
                 {dataGallary.map((item) => (
                     <div
                         key={item.id}
@@ -71,7 +71,7 @@ export default function Gallery() {
                     </div>
                 ))}
             </div>
-            <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
+            <div className="flex h-full w-full max-w-(--breakpoint-xl) flex-row items-center justify-center animate-zoomIn">
                 {data2Gallary.map((item) => (
                     <div
                         key={item.id}
@@ -86,7 +86,7 @@ export default function Gallery() {
                     </div>
                 ))}
             </div>
-            <div className="flex h-full w-full max-w-screen-xl flex-row items-center justify-center animate-zoomIn">
+            <div className="flex h-full w-full max-w-(--breakpoint-xl) flex-row items-center justify-center animate-zoomIn">
                 {data3Gallary.map((item) => (
                     <div
                         key={item.id}
