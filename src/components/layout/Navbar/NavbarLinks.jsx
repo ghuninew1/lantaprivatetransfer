@@ -1,6 +1,5 @@
 import { cx } from "#utils/utils";
 import { NavLink } from "react-router-dom";
-import PropTypes from "prop-types";
 
 function NavbarLinks({ link, ...rest }) {
     return (
@@ -22,9 +21,5 @@ function NavbarLinks({ link, ...rest }) {
         </NavLink>
     );
 }
-
-NavbarLinks.propTypes = {
-    link: PropTypes.object,
-};
 
 export default NavbarLinks;

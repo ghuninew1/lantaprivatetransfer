@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import { navLinks } from "#data/navLinks";
 
-export default function Footer() {
-  return (
-    <footer className="h-footer w-full p-2 text-center text-sm text-neutral-600 shadow-lg shadow-slate-700 animate-fadeInUp">
-      © 2024 Copyright :
-      <Link className="ml-2 text-neutral-700" to={"/"}>
-      LANTAPRIVATETRANSFER©
-      </Link>
-    </footer>
-  );
+export default function Footer({ brand, isHome }) {
+    return (
+        <footer className="home-footer">
+            <nav aria-label="Footer navigation">
+                {navLinks.map(({ text, to }) => <Link key={to} to={to}>{text}</Link>)}
+            </nav>
+            <p>{brand}{isHome ? " — reference preview" : ""}</p>
+        </footer>
+    );
 }

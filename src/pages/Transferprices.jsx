@@ -1,41 +1,54 @@
+import { useSearchParams } from "react-router-dom";
+import PageLayout from "#components/layout/PageLayout";
+import { referenceContent, referenceVehicles } from "#data/referenceWebsite";
+
+const { currency, tables } = referenceContent.routesAndPrices;
+const tablesByOrigin = new Map(tables.map((table) => [table.origin, table]));
+const amounts = new Intl.NumberFormat("en", { style: "currency", currency, currencyDisplay: "code", maximumFractionDigits: 0 });
+
 export default function Transferprices() {
-    const tableData = [
-        ["Ao nammao pier - Railay beach ( Krabi )", "2,599 THB", "2,999 THB", "3,199 THB"],
-        ["Ao nang Beach ( Krabi )", "2,499 THB", "2,999 THB", "3,199 THB"],
-        ["Donsak Pier ( Suratthani )", "4,999 THB", "5,199 THB	", "5,499 THB"],
-        ["Had Yao ( Krabi )", "3,199 THB", "3,499 THB", "3,699 THB"],
-        ["Ao nammao pier - Railay beach ( Krabi )", "2,599 THB", "2,999 THB", "3,199 THB"],
-        ["Ao nang Beach ( Krabi )", "2,499 THB", "2,999 THB", "3,199 THB"],
-        ["Donsak Pier ( Suratthani )", "4,999 THB", "5,199 THB	", "5,499 THB"],
-        ["Had Yao ( Krabi )", "3,199 THB", "3,499 THB", "3,699 THB"],
-    ];
+    const [params, setParams] = useSearchParams();
+    const table = tablesByOrigin.get(params.get("from")) ?? tables[0];
+
     return (
-        <div className="flex w-full flex-col items-center justify-center">
-            <div className="mb-10 flex h-44 w-full flex-col items-end justify-end bg-[url('/img/bg7.avif')] bg-cover bg-center bg-no-repeat lg:h-60 box-shadow">
-                <h1 className="mb-2 mr-10 rounded-md p-2 text-2xl font-bold uppercase text-slate-200 lg:text-4xl">
-                    {" "}
-                    Transferprices
-                </h1>
-            </div>
-            <table className="table-auto w-full max-w-4xl border-collapse border border-gray-300 text-center animate-fadeIn">
-                <thead>
-                    <tr className="bg-gray-200 text-gray-600 font-bold text-sm lg:text-base">
-                        <th>Destination</th>
-                        <th>Standard Car</th>
-                        <th>Luxury SUV</th>
-                        <th>Family Van</th>
+        <PageLayout title="Check Price">
+            <p className="rounded bg-amber-50 p-4 text-sm">
+                Reference rates from Krabi Best Transfer for comparison. Lanta Private Transfer rates and availability are pending confirmation.
+                Entries with an unconfirmed amount need a quote.
+            </p>
+            <label className="grid max-w-lg gap-1 font-semibold">
+                Pickup location
+                <select
+                    value={table.origin}
+                    onChange={(event) => setParams({ from: event.target.value })}
+                    className="w-full min-w-0 rounded border border-gray-300 bg-white p-2 font-normal"
+                >
+                    {tables.map(({ origin }) => <option key={origin} value={origin}>{origin}</option>)}
+                </select>
+            </label>
+            <table className="w-full table-fixed border-collapse text-xs wrap-anywhere sm:text-sm">
+                <caption className="pb-3 text-left text-lg font-semibold">{table.origin}</caption>
+                <thead className="bg-slate-800 text-white">
+                    <tr>
+                        <th scope="col" className="w-[38%] p-2 text-left sm:p-3">Destination</th>
+                        {referenceVehicles.map(({ type, passengers }) => (
+                            <th key={type} scope="col" className="p-2 sm:p-3">{type}<br />{passengers.split(" in rate table")[0]} pax</th>
+                        ))}
                     </tr>
                 </thead>
-                <tbody className="lg:text-base text-sm">
-                    {tableData.map((row, index) => (
-                        <tr key={index}>
-                            {row.map((cell, cellIndex) => (
-                                <td key={cellIndex}>{cell}</td>
+                <tbody>
+                    {table.routes.map(({ destination, prices }, index) => (
+                        <tr key={index} className="border-b border-gray-200 even:bg-slate-100">
+                            <th scope="row" className="p-2 text-left font-medium sm:p-3">{destination}</th>
+                            {prices.map((price, position) => (
+                                <td key={referenceVehicles[position].type} className="p-2 text-center sm:p-3">
+                                    {price > 0 ? amounts.format(price) : "Unconfirmed"}
+                                </td>
                             ))}
                         </tr>
                     ))}
                 </tbody>
             </table>
-        </div>
+        </PageLayout>
     );
 }

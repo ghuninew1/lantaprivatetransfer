@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 const Iframe = ({ src, isOn = false }) => {
     if (!isOn) return null;
     return (
@@ -14,10 +12,6 @@ const Iframe = ({ src, isOn = false }) => {
             loading="lazy"
         ></iframe>
     );
-};
-Iframe.propTypes = {
-    src: PropTypes.string,
-    isOn: PropTypes.bool,
 };
 
 export default Iframe;

@@ -1,68 +1,45 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, matchPath, useLocation } from "react-router-dom";
 import { navLinks } from "#data/navLinks";
-import NavbarLinks from "./NavbarLinks";
 import { cx } from "#utils/utils";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
-const Navbar = () => {
-    const [open, setOpen] = useState(false);
-
-    const handleOpen = () => {
-        setOpen(!open);
-    };
-
-    function RenderDefaultMenu() {
-        return (
-            <div className="hidden h-full w-full items-center justify-center gap-4 lg:flex">
-                <NavLink to="/">
-                    <img src="/img/logo1280.png" alt="logo" className="h-10" />
-                </NavLink>
-                {navLinks
-                    .filter((link) => link.hide !== true)
-                    .map((link) => (
-                        <NavbarLinks key={link.text} link={link} />
-                    ))}
-            </div>
-        );
-    }
-
-    const renderMobileMenu = () => (
-        <div
-            className={cx(
-                open ? "scale-y-100" : "scale-y-0",
-                "absolute top-0 z-30 h-auto w-full origin-top gap-1 bg-black text-white transition-all ease-in-out duration-300 lg:hidden",
-            )}
-        >
-            {navLinks
-                .filter((link) => link.hide !== true)
-                .map((link) => (
-                    <NavbarLinks key={link.text} link={link} onClick={handleOpen} />
-                ))}
-        </div>
-    );
+export default function Navbar({ brand }) {
+    const [openFor, setOpenFor] = useState(null);
+    const { key, pathname } = useLocation();
+    const open = openFor === key;
 
     return (
-        <nav className="h-auto w-full animate-fadeIn lg:h-nav" role="navigation">
-            <div className="z-20 flex w-full items-center justify-between ">
-                <NavLink to="/">
-                    <img src="/img/logo320.png" alt="logo" className="h-10 px-5 lg:hidden" />
-                </NavLink>
+        <nav className="home-reference-nav" aria-label="Main navigation">
+            <div className="home-container home-reference-nav-inner">
+                <Link className="home-brand" to="/" onClick={() => setOpenFor(null)}>{brand}</Link>
                 <button
-                    onClick={handleOpen}
-                    className={cx(open ? "text-red-600" : "text-red-500", "z-20 hover:text-green-600 lg:hidden")}
+                    className="home-menu-toggle"
+                    type="button"
+                    onClick={() => setOpenFor(open ? null : key)}
+                    aria-expanded={open}
+                    aria-controls="site-menu"
                 >
-                    {open ? <XMarkIcon className="h-10 w-10" /> : <Bars3Icon className="h-10 w-10" />}
+                    {open ? "Close menu" : "Menu"}
                 </button>
-            </div>
-            <div className="hidden h-full items-center justify-center lg:flex ">
-                <RenderDefaultMenu />
-            </div>
-            <div className="relative flex h-full w-full items-center justify-center bg-slate-900 lg:hidden z-20">
-                {renderMobileMenu()}
+                <div id="site-menu" className={cx("home-reference-menu", open && "is-open")}>
+                    {navLinks.map(({ to, sourcePath, text }) => {
+                        const current = matchPath(to, pathname) || matchPath(sourcePath, pathname);
+                        const inSection = to !== "/" && matchPath({ path: to, end: false }, pathname);
+
+                        return (
+                            <Link
+                                key={to}
+                                to={to}
+                                onClick={() => setOpenFor(null)}
+                                className={cx((current || inSection) && "active")}
+                                aria-current={current ? "page" : undefined}
+                            >
+                                {text}
+                            </Link>
+                        );
+                    })}
+                </div>
             </div>
         </nav>
     );
-};
-
-export default Navbar;
+}

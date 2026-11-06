@@ -1,5 +1,3 @@
-import PropTypes from "prop-types";
-
 function shadeColor(color, percent) {
     let R = parseInt(color.substring(1, 3), 16);
     let G = parseInt(color.substring(3, 5), 16);
@@ -161,23 +159,6 @@ CircularProgressBar.defaultProps = {
     withGradient: false,
     anticlockwise: false,
     initialAngularDisplacement: 0,
-};
-
-CircularProgressBar.propTypes = {
-    maxValue: PropTypes.number.isRequired,
-    selectedValue: PropTypes.number.isRequired,
-    radius: PropTypes.number,
-    strokeWidth: PropTypes.number,
-    label: PropTypes.string,
-    activeStrokeColor: PropTypes.string,
-    inactiveStrokeColor: PropTypes.string,
-    backgroundColor: PropTypes.string,
-    textColor: PropTypes.string,
-    labelFontSize: PropTypes.number,
-    valueFontSize: PropTypes.number,
-    withGradient: PropTypes.bool,
-    anticlockwise: PropTypes.bool,
-    initialAngularDisplacement: PropTypes.number,
 };
 
 export default CircularProgressBar;

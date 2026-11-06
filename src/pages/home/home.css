@@ -1,0 +1,80 @@
+.home-page { color: #27292c; }
+.home-container { width: min(1170px, calc(100% - 40px)); margin-inline: auto; }
+.home-hero { background: #303c46; color: white; }
+.home-hero-inner { min-height: 620px; display: grid; grid-template-columns: 490px 1fr; gap: 36px; align-items: center; }
+.home-booking-panel { padding: 32px; background: rgba(255,255,255,.23); }
+.home-booking-panel h2 { font-size: 24px; font-weight: 700; }
+.home-booking-panel p { margin: 14px 0 24px; line-height: 1.7; }
+.home-button { display: inline-block; padding: 14px 24px; background: #bb3d4a; color: white; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.home-button:hover { background: #9d303d; }
+.home-panel-link { display: block; margin-top: 18px; color: white; text-decoration: underline; }
+.home-hero-copy h1 { margin: 20px 0; font-size: clamp(36px, 4vw, 55px); font-weight: 800; line-height: 1.12; text-transform: uppercase; }
+.home-hero-copy p { max-width: 600px; font-size: 20px; font-weight: 600; line-height: 1.5; }
+.home-hero-copy .home-button { margin-top: 25px; }
+.home-intro { display: grid; grid-template-columns: 38% 1fr; gap: 48px; padding-block: 90px 70px; align-items: start; }
+.home-image-placeholder { min-height: 300px; display: grid; place-items: center; background: #d8e4e6; color: #52676b; }
+.home-kicker { font-size: 18px; font-weight: 700; text-transform: uppercase; }
+.home-intro h2, .home-vehicles h2 { margin: 4px 0 24px; font-size: 30px; font-weight: 800; text-transform: uppercase; }
+.home-intro h2, .home-vehicles h2 span { color: #ba3d49; }
+.home-intro-copy > p:not(.home-kicker) { margin-bottom: 20px; color: #666; line-height: 1.85; }
+.home-intro-copy a, .home-vehicle-grid a { color: #b63846; font-weight: 700; text-decoration: underline; }
+.home-highlights { display: grid; grid-template-columns: repeat(3, 1fr); color: white; }
+.home-highlights article { padding: 50px 34px; text-align: center; background: #29a9c0; }
+.home-highlights article:nth-child(2) { background: #bb3d4a; }
+.home-highlights article:nth-child(3) { background: #91bb5d; }
+.home-highlights svg { width: 52px; height: 52px; margin: 0 auto 20px; stroke-width: 1; }
+.home-highlights h3 { font-size: 20px; font-weight: 700; text-transform: uppercase; }
+.home-highlights p { margin-top: 12px; line-height: 1.6; }
+.home-vehicles { padding-block: 100px; text-align: center; }
+.home-vehicle-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 35px; margin-top: 70px; text-align: left; }
+.home-vehicle-grid h3 { font-size: 21px; font-weight: 700; }
+.home-vehicle-placeholder { height: 210px; margin: 18px 0 25px; display: grid; place-items: center; background: #f1f3f3; color: #6d7777; }
+.home-vehicle-grid a { display: block; margin-top: 16px; font-size: 13px; text-transform: uppercase; }
+.home-contact-band { padding: 55px 0; background: #172b45; color: white; }
+.home-contact-band .home-container { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.home-contact-band h2 { font-size: 24px; font-weight: 700; }
+@media (max-width: 1023px) {
+    .home-hero-inner { min-height: auto; grid-template-columns: 1fr; gap: 30px; padding-block: 45px; }
+    .home-hero-copy { grid-row: 1; }
+    .home-intro { grid-template-columns: 1fr; gap: 30px; padding-block: 55px; }
+    .home-highlights, .home-vehicle-grid { grid-template-columns: 1fr; }
+    .home-vehicle-grid { margin-top: 35px; }
+    .home-vehicles { padding-block: 65px; }
+}
+@media (max-width: 480px) { .home-contact-band .home-container { align-items: flex-start; flex-direction: column; } }
+.home-footer { padding: 45px 20px; background: #14263d; color: #d6dde4; text-align: center; font-size: 13px; }
+.home-footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-bottom: 25px; }
+.home-footer a:hover { color: white; text-decoration: underline; }
+@media (min-width: 1024px) {
+    .home-shell > header { background: #172b45; }
+    .home-shell > nav { height: 110px; }
+    .home-shell > nav > div:nth-child(2) > div { max-width: 1170px; margin: auto; justify-content: space-between; }
+    .home-shell > nav a { border-radius: 0; font-size: 14px; }
+    .home-shell > nav a p { font-size: 14px; }
+    .home-shell > nav a[href='/booking'] { padding: 15px 23px; background: #bb3d4a; color: white; }
+}
+.home-reference-notice { padding: 10px 20px; background: #fff0c2; color: #493b16; text-align: center; font-size: 14px; }
+.home-reference-header { background: #172b45; color: white; padding: 8px 0; font-size: 14px; }
+.home-reference-header .home-container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 20px; }
+.home-reference-nav { background: white; }
+.home-reference-nav-inner { min-height: 110px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.home-brand { font-weight: 800; font-size: 20px; }
+.home-reference-menu { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; text-transform: uppercase; font-size: 13px; font-weight: 700; }
+.home-reference-menu a:hover, .home-reference-menu a.active { color: #bb3d4a; }
+.home-reference-menu span { color: #777; }
+.home-reference-menu small { font-size: 10px; text-transform: none; }
+.home-menu-toggle { display: none; }
+.home-promotion { padding-top: 45px; text-align: center; }
+.home-promotion h2, .home-articles h2 { font-size: 26px; font-weight: 800; text-transform: uppercase; }
+.home-articles { padding-bottom: 90px; }
+.home-articles h3 { font-size: 18px; font-weight: 700; overflow-wrap: anywhere; }
+@media (max-width: 1023px) {
+    .home-reference-nav-inner { min-height: 65px; flex-wrap: wrap; padding-block: 12px; }
+    .home-menu-toggle { display: block; }
+    .home-reference-menu { display: none; flex-basis: 100%; flex-direction: column; align-items: flex-start; }
+    .home-reference-menu.is-open { display: flex; }
+}
+
+.home-reference-menu a[href='/booking'] { padding: 12px 20px; background: #bb3d4a; color: white; }
+.home-reference-menu a[href='/booking']:hover,
+.home-reference-menu a[href='/booking'].active { background: #9d303d; color: white; }
