@@ -10,7 +10,8 @@ export default function PageLayout({ title, children }) {
 
     return (
         <>
-            <div className="bg-slate-800 py-12 text-white md:py-16">
+            <div className="home-hero py-12 text-white md:py-16">
+                <img src={`${import.meta.env.BASE_URL}images/bg7.jpg`} alt="" className="home-hero-image" />
                 <div className="home-container">
                     <h1 className="text-3xl font-bold md:text-4xl">{title}</h1>
                 </div>
