@@ -6,6 +6,7 @@ import { cx } from "#utils/utils";
 export default function Navbar({ brand, logo }) {
     const [openFor, setOpenFor] = useState(null);
     const [hiddenFor, setHiddenFor] = useState(null);
+    const [compact, setCompact] = useState(false);
     const sticky = useRef(null);
     const { key, pathname } = useLocation();
     const open = openFor === key;
@@ -17,6 +18,7 @@ export default function Navbar({ brand, logo }) {
         function handleScroll() {
             const currentY = Math.max(0, window.scrollY);
             const distance = currentY - previousY;
+            setCompact(nav.previousElementSibling.getBoundingClientRect().bottom <= 0);
 
             if (currentY === 0 || nav.getBoundingClientRect().top > 0) {
                 setHiddenFor(null);
@@ -29,6 +31,7 @@ export default function Navbar({ brand, logo }) {
             previousY = currentY;
         }
 
+        handleScroll();
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
     }, [key]);
@@ -36,7 +39,7 @@ export default function Navbar({ brand, logo }) {
     return (
         <div className="home-sticky-nav" ref={sticky}>
             <nav
-                className={cx("home-reference-nav", hiddenFor === key && !open && "is-scroll-hidden")}
+                className={cx("home-reference-nav", compact && "is-compact", hiddenFor === key && !open && "is-scroll-hidden")}
                 aria-label="Main navigation"
             >
                 <div className="home-container home-reference-nav-inner">
@@ -53,10 +56,16 @@ export default function Navbar({ brand, logo }) {
                         onClick={() => setOpenFor(open ? null : key)}
                         aria-expanded={open}
                         aria-controls="site-menu"
+                        aria-label={open ? "Close menu" : "Open menu"}
                     >
-                        {open ? "Close menu" : "Menu"}
+                        <span className="home-menu-icon" aria-hidden="true">
+                            <span />
+                            <span />
+                            <span />
+                        </span>
                     </button>
-                    <div id="site-menu" className={cx("home-reference-menu", open && "is-open")}>
+                    <div id="site-menu" className={cx("home-menu-panel", open && "is-open")}>
+                      <div className="home-reference-menu">
                         {navLinks.map(({ to, sourcePath, text }) => {
                             const current = matchPath(to, pathname) || matchPath(sourcePath, pathname);
                             const inSection = to !== "/" && matchPath({ path: to, end: false }, pathname);
@@ -73,6 +82,7 @@ export default function Navbar({ brand, logo }) {
                                 </Link>
                             );
                         })}
+                      </div>
                     </div>
                 </div>
             </nav>
