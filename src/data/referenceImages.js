@@ -13,7 +13,7 @@ function image(path, width, height, alt = "") {
 }
 
 export const referenceImages = {
-    logo: image("images/logo.png", 193, 78, "Lanta Private Transfer"),
+    logo: image("images/logo640.png", 640, 640, "Lanta Private Transfer"),
     hero: image("images/bg1.jpg", 1920, 1000),
     welcome: image("images/map.jpg", 768, 1019, "Map of Ko Lanta and its ferry connections"),
     features: [image("images/ico1.png", 43, 61), image("images/ico2.png", 70, 61), image("images/ico3.png", 60, 61)],

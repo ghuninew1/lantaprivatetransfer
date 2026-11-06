@@ -10,10 +10,13 @@ import "../../pages/home/home.css";
 
 export default function RouteRoot() {
     const { pathname } = useLocation();
-    const isHome = pathname === "/" || pathname.toLowerCase() === "/index.php";
+    const isHome = pathname === "/" || pathname === "/home";
 
     return (
-        <div data-home={isHome || undefined} className="bg-background text-foreground flex min-h-screen flex-col font-sans">
+        <div
+            data-home={isHome || undefined}
+            className="flex min-h-screen flex-col bg-background font-sans text-foreground"
+        >
             <Header />
             <Navbar brand={businessContact.name} logo={isHome ? referenceImages.logo : undefined} />
             <main className="min-w-0 flex-1">
