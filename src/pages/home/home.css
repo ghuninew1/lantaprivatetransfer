@@ -92,8 +92,7 @@ div.home-vehicle-image, div.home-article-image { display: grid; place-items: cen
     .home-header-inner { flex-direction: column; gap: 0; }
     .home-header-label { min-height: 32px; flex-basis: auto; align-self: flex-start; padding-right: 36px; }
     .home-header-contacts { justify-content: flex-start; gap: 4px 16px; padding-block: 6px; }
-    .home-sticky-nav { min-height: 65px; }
-    [data-home] .home-sticky-nav { min-height: 102px; }
+    .home-sticky-nav { min-height: 102px; }
     .home-reference-nav-inner { min-height: 65px; flex-wrap: wrap; row-gap: 0; padding-block: 12px; }
     .home-reference-nav.is-compact .home-reference-nav-inner { min-height: 48px; padding-block: 0; }
     .home-reference-nav.is-compact .home-menu-toggle { min-height: 48px; }
@@ -144,8 +143,8 @@ div.home-vehicle-image, div.home-article-image { display: grid; place-items: cen
 .home-articles article { position: relative; background: white; padding: 30px; }
 .home-articles time { position: absolute; top: 30px; left: 0; background: #222; color: white; padding: 10px 13px; font-size: 13px; font-weight: 700; text-transform: uppercase; }
 .home-article-image { aspect-ratio: 4 / 3; }
-[data-home] .home-brand img { width: 193px; height: 78px; object-fit: contain; max-width: 45vw; }
-[data-home] .home-reference-nav.is-compact .home-brand img { width: auto; height: 39px; }
+.home-brand img { width: 193px; height: 78px; object-fit: contain; max-width: 45vw; }
+.home-reference-nav.is-compact .home-brand img { width: auto; height: 39px; }
 .home-footer { background: #333; }
 @media (min-width: 1024px) {
     .home-hero-inner { padding-top: 52px; }
